@@ -31,14 +31,14 @@ A modern, responsive landing page for a fictional vintage car garage — built u
 │ ├── AboutUs.js
 │ ├── Contact.js
 │ ├── Footer.js
-
-
-
-🖼️ Preview
-![Image](https://github.com/user-attachments/assets/541224d9-3159-4a7e-b212-b1ca140d0091)
 │ ├── Modal.js
 │ └── CarDetails.js
 ├── /utils
 │ └── scrollUtils.js # Scroll behavior logic
 ├── /styles
 │ └── main.css # Custom styles (optional)
+
+
+
+🖼️ Preview
+![Image](https://github.com/user-attachments/assets/417da994-e394-47a5-8b50-236c1dbf6af9)
