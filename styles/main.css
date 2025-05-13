@@ -1,0 +1,278 @@
+/* Vintage Color Variables */
+:root {
+    --color-sepia-darker: #704214;
+    --color-sepia-dark: #8B4513;
+    --color-sepia: #A0522D;
+    --color-sepia-light: #DEB887;
+    --color-sepia-lighter: #F5DEB3;
+    --color-antique-white: #FAEBD7;
+    --color-vintage-gold: #CFB53B;
+    --color-vintage-brown: #8B4513;
+    --color-vintage-red: #800000;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background-color: var(--color-antique-white);
+    color: var(--color-sepia-dark);
+    scroll-behavior: smooth;
+}
+
+.vintage-text {
+    color: var(--color-vintage-brown);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.vintage-border {
+    border: 2px solid var(--color-vintage-brown);
+}
+
+.vintage-bg {
+    background-color: var(--color-antique-white);
+}
+
+/* Navigation Styles */
+.nav-link {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--color-vintage-gold);
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.shadow-vintage {
+    box-shadow: 0 4px 6px -1px rgba(139, 69, 19, 0.1),
+                0 2px 4px -1px rgba(139, 69, 19, 0.06);
+}
+
+/* Background Image Styles */
+.bg-hero-image {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: all 0.5s ease-in-out;
+}
+
+.bg-hero-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+/* Card Styles */
+.service-card {
+    transition: all 0.3s ease-in-out;
+    background-color: var(--color-antique-white);
+    border: 1px solid var(--color-sepia-light);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(139, 69, 19, 0.1);
+}
+
+.service-card .service-icon {
+    transition: transform 0.3s ease-in-out;
+    color: var(--color-vintage-brown);
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(139, 69, 19, 0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.service-card:hover::before {
+    opacity: 1;
+}
+
+/* Work Card Styles */
+.work-card {
+    transition: transform 0.3s ease-in-out;
+    background-color: var(--color-antique-white);
+    border: 1px solid var(--color-sepia-light);
+}
+
+.work-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(139, 69, 19, 0.1);
+}
+
+/* About Section Styles */
+.about-image-container img {
+    transition: transform 0.5s ease-in-out;
+    border: 4px solid var(--color-sepia-light);
+}
+
+.about-image-container:hover img {
+    transform: scale(1.05);
+}
+
+/* Button Styles */
+.button-hover {
+    transition: all 0.3s ease-in-out;
+    background-color: var(--color-vintage-brown);
+    color: var(--color-antique-white);
+}
+
+.button-hover:hover {
+    transform: translateY(-2px) scale(1.05);
+    background-color: var(--color-sepia-darker);
+    box-shadow: 0 5px 15px rgba(139, 69, 19, 0.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUpDelay {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+    70% {
+        transform: scale(0.9);
+        opacity: 0.9;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Animation Classes */
+.animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-slide-up {
+    animation: slideUp 1s ease-out forwards;
+}
+
+.animate-slide-up-delay {
+    animation: slideUpDelay 1.5s ease-out forwards;
+}
+
+.animate-bounce-in {
+    animation: bounceIn 1s cubic-bezier(0.36, 0, 0.66, 1) forwards;
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 1s ease-out 1s forwards;
+}
+
+/* Utility Classes */
+.text-sepia-dark {
+    color: var(--color-sepia-dark);
+}
+
+.text-sepia {
+    color: var(--color-sepia);
+}
+
+.bg-sepia-light {
+    background-color: var(--color-sepia-light);
+}
+
+.bg-sepia-lighter {
+    background-color: var(--color-sepia-lighter);
+}
+
+.text-antique-white {
+    color: var(--color-antique-white);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-link::after {
+        display: none;
+    }
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Parallax Effect */
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
